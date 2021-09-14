@@ -1,15 +1,12 @@
 @extends('layouts.front')
-@section('title', 'テニス試合の新規作成')
+@section('title', 'MeeT Tennis')
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h2>テニスイベント新規作成</h2>
-                <form action="{{ action('Admin\NewsController@create') }}" method="post" enctype="multipart/form-data">
-
-
-
+                <h2>ミートテニス　トップページ</h2>
+                <form action="{{ action('Admin\TennisController@create') }}" method="post" enctype="multipart/form-data">
                     @if (count($errors) > 0)
                         <ul>
                             @foreach($errors->all() as $e)

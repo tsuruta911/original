@@ -12,4 +12,9 @@ class TennisController extends Controller
       return view('admin.tennis.create');
     }
     //
+    public function create(Request $request)
+  {
+      // admin/news/createにリダイレクトする
+      return redirect('admin/tennis/create');
+  }  
 }
