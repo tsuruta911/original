@@ -10942,3 +10942,11 @@ a.text-dark:focus {
   }
 }
 
+img {
+  width: 100%;
+}
+
+.logo {
+  width: 100px;
+}
+

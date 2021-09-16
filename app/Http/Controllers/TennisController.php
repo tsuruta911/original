@@ -12,7 +12,7 @@ class TennisController extends Controller
 {
     public function index(Request $request)
     {
-        return view('layouts.tennis.toppage');
+        return view('toppage');
     }
     
 }

@@ -22,5 +22,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'admin'], function() {
     Route::get('tennis/create', 'Admin\TennisController@add');
     Route::post('news/create', 'Admin\TennisController@create'); # 追記
-    Route::get('/', 'TennisController@index');
 });
+
+Route::get('/', 'TennisController@index');
