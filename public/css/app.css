@@ -10950,3 +10950,12 @@ img {
   width: 100px;
 }
 
+.container {
+  width: 920px;
+  margin: 0 auto 40px auto;
+}
+
+.col-md-6 {
+  opacity: 0.5;
+}
+
