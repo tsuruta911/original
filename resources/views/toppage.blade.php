@@ -2,6 +2,7 @@
 @section('title', 'MeeT Tennis')
 
 @section('content')
+<div class="bg-img">
     <div class="container">
         <h2>MeeTTennis</h2>
         <div class="col-md-6">
@@ -17,4 +18,5 @@
             <p>直近のテニスの開催情報</p>
         </div>
     </div>
+</div>
 @endsection

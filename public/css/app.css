@@ -10951,16 +10951,17 @@ img {
 }
 
 .container {
-  width: 920px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 30px auto;
 }
 
 .col-md-6 {
   opacity: 0.5;
 }
 
-.row {
-  width: 920px;
-  margin: 0 auto 40px auto;
+.bg-img {
+  background: url(/images/main.jpg?aedc0ee1995095a5206c604d7f42e011) no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  height: 100vh;
 }
 

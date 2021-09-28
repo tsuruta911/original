@@ -30,57 +30,56 @@
             <header>
                 {{-- 画面上部に表示するナビゲーションバーです。 --}}
                 <nav class="navbar navbar-expand-md navbar-laravel">
-                    <div class="logo">
+                    <div class="logo mr-4">
                          <a href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" /></a>
                     </div>
-                    <div class="container">
-                        <buttom class="navbar-toggler" type="buttom" data-toggler="collapse" data-target="#navbarSupportedContent"
-                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </buttom> 
+                    <buttom class="navbar-toggler" type="buttom" data-toggler="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </buttom> 
+                    
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mr-auto">
+                            <li class="mr-4"><a href="{{ url('/about') }}">サイトについて</a></li>
+                            <li><a href="{{ url('/check') }}">開催情報検索</li>
+                        </ul>
                         
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <!-- Left Side Of Navbar -->
-                            <ul class="navbar-nav mr-auto">
-                                <li><a href="{{ url('/about') }}">サイトについて</a></li>
-                                <li><a href="{{ url('/check') }}">開催情報検索</li>
-                            </ul>
-                            
-                            <!-- Right Side Of Navbar -->
-                            <ul class="navbar-nav ml-auto">
-                                <!-- Authentication Links -->
-                            {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
-                            @guest
-                                <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Authentication Links -->
+                        {{-- ログインしていなかったらログイン画面へのリンクを表示 --}}
+                        @guest
+                            <li><a class="nav-link d-block p-2 px-4 border rounded-pill mr-4 text-dark" href="{{ route('login') }}">ログイン</a></li>
+                            <li><a class="nav-link d-block p-2 px-4 border rounded-pill text-dark" href="{{ route('register') }}">新規登録</a></li>
 
-                            {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
-                            @else
-                                <li class="nav-item dropdown">
-                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }} <span class="caret"></span>
+                        {{-- ログインしていたらユーザー名とログアウトボタンを表示 --}}
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
                                     </a>
-    
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ route('logout') }}"
-                                           onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
-                                            {{ __('Logout') }}
-                                        </a>
-    
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                            @csrf
-                                        </form>
-                                    </div>
-                                </li>
-                                @endguest
-                            </ul>
-                        </div>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                            @endguest
+                        </ul>
                     </div>
                 </nav>
                  {{-- ここまでナビゲーションバー --}}
             </header>
             
-             <main class="py-4">
+             <main>
                  {{-- コンテンツをここに入れるため、@yieldで空けておきます。 --}}
                  @yield('content')
              </main>
