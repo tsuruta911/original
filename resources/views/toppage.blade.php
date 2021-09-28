@@ -11,7 +11,10 @@
         </div>
         <div class="row">
             <p class="mr-4"><a class="d-block rounded-circle p-4 bg-info" href="{{ url('/entry') }}">エントリーする</a></p>
-            <p class="mr-4"><a class="d-block rounded-circle p-4 bg-info"href="{{ url('/#') }}">テニスマッチングを主催する</a></p>
+            <p class="mr-4"><a class="d-block rounded-circle p-4 bg-info"href="{{ url('/create') }}">テニスマッチングを主催する</a></p>
+        </div>
+        <div class="row">
+            <p>直近のテニスの開催情報</p>
         </div>
     </div>
 @endsection
