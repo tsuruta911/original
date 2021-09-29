@@ -10954,10 +10954,6 @@ img {
   margin: 0 auto 30px auto;
 }
 
-.col-md-6 {
-  opacity: 0.5;
-}
-
 .bg-img {
   background: url(/images/main.jpg?aedc0ee1995095a5206c604d7f42e011) no-repeat;
   background-size: cover;
