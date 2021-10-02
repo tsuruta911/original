@@ -20,15 +20,15 @@
                         </ul>
                     @endif
                     <div class="form-group row">
-                        <label class="col-md-2">試合概要</label>
+                        <label class="col-md-2">イベント名</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="match" value="{{ old('match')  }}">
+                            <input type="text" class="form-control" name="eventname" value="{{ old('eventname')  }}">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-md-2">開催日時</label>
+                        <label class="col-md-2">開催内容</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="day" value="{{ old('day')  }}">
+                            <textarea class="form-control" name="content" rows="20">{{ old('content') }}</textarea>
                         </div>
                     </div>
                     <div class="form-group row">
@@ -38,9 +38,15 @@
                         </div> 
                     </div>
                     <div class="form-group row">
-                       <label class="col-md-2">注意事項</label>
+                       <label class="col-md-2">開催時間</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" name="Notes" value="{{ old('Notes')  }}">
+                            <input type="text" class="form-control" name="time" value="{{ old('time')  }}">
+                        </div> 
+                    </div>
+                    <div class="form-group row">
+                       <label class="col-md-2">料金</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" name="money" value="{{ old('money')  }}">
                         </div> 
                     </div>
                     {{ csrf_field() }}
