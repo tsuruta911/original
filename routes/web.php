@@ -23,6 +23,7 @@ Route::group(['prefix' => 'admin','middleware' => 'auth' ], function() {
     Route::get('tennis/create', 'Admin\TennisController@add');
     Route::post('tennis/create', 'Admin\TennisController@create'); # 追記
     Route::get('tennis', 'Admin\TennisController@index')->middleware('auth'); // 追記
+    Route::post('tennis/edit', 'Admin\TennisController@update')->middleware('auth'); // 追記
 });
 
 Route::get('/', 'TennisController@index');

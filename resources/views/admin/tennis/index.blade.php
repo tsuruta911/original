@@ -1,5 +1,5 @@
 @extends('layouts.front')
-@section('eventname', '登録済みイベントの一覧')
+@section('title', '登録済みイベントの一覧')
 
 @section('content')
     <div class="container">
@@ -33,7 +33,6 @@
                             <tr>
                                 <th width="10%">ID</th>
                                 <th width="20%">イベント名</th>
-                                <th width="50%">開催内容</th>
                                 <th width="20%">開催場所</th>
                                 <th width="10%">開催時間</th>
                                 <th width="10%">料金</th>
@@ -43,8 +42,15 @@
                             @foreach($posts as $event)
                                 <tr>
                                     <th>{{ $event->id }}</th>
-                                    <td>{{ \Str::limit($event->eventname, 100) }}</td>
-                                    <td>{{ \Str::limit($event->content, 250) }}</td>
+                                    <td>{{ \Str::limit($event->eventname, 50) }}</td>
+                                    <td>{{ \Str::limit($event->place, 50) }}</td>
+                                    <td>{{ \Str::limit($event->time, 50) }}</td>
+                                    <td>{{ \Str::limit($event->money, 10) }}</td>
+                                    <td>
+                                        <div>
+                                            <a href="{{ action('Admin\TennisController@edit', ['id' => $event->id]) }}">編集</a>
+                                        </div>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>

@@ -42,4 +42,30 @@ class TennisController extends Controller
       }
       return view('admin.tennis.index', ['posts' => $posts, 'cond_title' => $cond_title]);
   }
+  public function edit(Request $request)
+  {
+      // News Modelからデータを取得する
+      $event = Event::find($request->id);
+      if (empty($event)) {
+        abort(404);    
+      }
+      return view('admin.tennis.edit', ['event_form' => $event]);
+  }
+
+
+  public function update(Request $request)
+  {
+      // Validationをかける
+      $this->validate($request, Event::$rules);
+      // News Modelからデータを取得する
+      $event = Event::find($request->id);
+      // 送信されてきたフォームデータを格納する
+      $event_form = $request->all();
+      unset($event_form['_token']);
+
+      // 該当するデータを上書きして保存する
+      $event->fill($event_form)->save();
+
+      return redirect('admin/tennis');
+  }
 }

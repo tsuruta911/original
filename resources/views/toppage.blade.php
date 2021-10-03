@@ -11,7 +11,7 @@
             <p>テニスしたい人同士をマッチングするサイト</p>
         </div>
         <div class="row text-white">
-            <p class="mr-4"><a class="d-block border rounded-pill p-4 bg-danger" href="{{ url('/entry') }}">エントリーする　＞</a></p>
+            <p class="mr-4"><a class="d-block border rounded-pill p-4 bg-danger" href="{{ url('/admin/tennis') }}">エントリーする　＞</a></p>
             <p class="mr-4"><a class="d-block border rounded-pill p-4 bg-info"href="{{ url('/admin/tennis/create') }}">テニスマッチングを主催する　＞</a></p>
         </div>
         <div>
