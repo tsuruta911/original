@@ -34,8 +34,8 @@
                                 <th width="10%">ID</th>
                                 <th width="20%">イベント名</th>
                                 <th width="20%">開催場所</th>
-                                <th width="10%">開催時間</th>
-                                <th width="10%">料金</th>
+                                <th width="20%">開催時間</th>
+                                <th width="20%">料金</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,11 +44,14 @@
                                     <th>{{ $event->id }}</th>
                                     <td>{{ \Str::limit($event->eventname, 50) }}</td>
                                     <td>{{ \Str::limit($event->place, 50) }}</td>
-                                    <td>{{ \Str::limit($event->time, 50) }}</td>
+                                    <td>{{ \Str::limit($event->time, 10) }}</td>
                                     <td>{{ \Str::limit($event->money, 10) }}</td>
                                     <td>
                                         <div>
                                             <a href="{{ action('Admin\TennisController@edit', ['id' => $event->id]) }}">編集</a>
+                                        </div>
+                                        <div>
+                                            <a href="{{ action('Admin\TennisController@delete', ['id' => $event->id]) }}">削除</a>
                                         </div>
                                     </td>
                                 </tr>

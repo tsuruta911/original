@@ -29,19 +29,19 @@
                     <div class="form-group row">
                         <label class="col-md-2" for="place">開催場所</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="place" rows="20">{{ $event_form->place }}</textarea>
+                            <input type="text" class="form-control" name="place" value="{{ $event_form->place }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="time">開催時間</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="time" rows="20">{{ $event_form->time }}</textarea>
+                           <input type="text" class="form-control" name="time" value="{{ $event_form->time }}">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-md-2" for="money">料金</label>
                         <div class="col-md-10">
-                            <textarea class="form-control" name="money" rows="20">{{ $event_form->money }}</textarea>
+                            <input type="text" class="form-control" name="money" value="{{ $event_form->money }}">
                         </div>
                     </div>
                     

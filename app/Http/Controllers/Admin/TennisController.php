@@ -68,4 +68,12 @@ class TennisController extends Controller
 
       return redirect('admin/tennis');
   }
+   public function delete(Request $request)
+  {
+      // 該当するNews Modelを取得
+      $event = Event::find($request->id);
+      // 削除する
+      $event->delete();
+      return redirect('admin/tennis/');
+  }  
 }
