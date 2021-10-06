@@ -41,7 +41,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
-                            <li class="mr-4"><a href="{{ url('/about') }}">サイトについて</a></li>
+                            <li class="mr-4"><a href="{{ url('admin/tennis/about') }}">サイトについて</a></li>
                             <li><a href="{{ url('/check') }}">開催情報検索</li>
                         </ul>
                         

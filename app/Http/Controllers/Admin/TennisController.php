@@ -75,5 +75,9 @@ class TennisController extends Controller
       // 削除する
       $event->delete();
       return redirect('admin/tennis/');
-  }  
+  } 
+  public function about()
+    {
+      return view('admin.tennis.about');
+    }
 }
