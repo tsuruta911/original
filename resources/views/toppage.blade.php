@@ -20,4 +20,22 @@
         </div>
     </div>
 </div>
+<div class="toppageevent">
+    <div class="container">
+    @if($posts != null)
+    <ul class="eventlist">
+        @foreach($posts as $event)
+        <li>
+            <a href="{{ route('tennis.show', ['event_id' => $event->id] ) }}">
+            <h3>{{ \Str::limit($event->eventname, 50) }}</h3>
+            <p>開催場所：{{ \Str::limit($event->place, 50) }}</p>
+            </a>
+        </li>
+        @endforeach
+    </ul>
+    @else
+    <h2>イベント募集がありません</h2>
+    @endif
+    </div>
+</div>
 @endsection

@@ -1,3 +1,44 @@
+$theme-color: #8067b3;
+$theme-text: #fff;
+$base-font-family: -apple-system, "游ゴシック体", "YuGothic", "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+$base-font-size:   14px;
+$base-font-weight: 400;
+$base-line-height: 1.4;
+$spacing:20px;
+$text-color:#333;
+$background-color: #fdfdfd;
+$green:#00A19A;
+$grey:#b5b5b6;
+$blue:#0072D3;
+$yellow:#E1B73A;
+$red:#E60012;
+$titlebg:#555;
+$btnbg:#8C7676;
+// Width of the content area
+$pc-width: 1024px;
+$ipad-width: 768px;
+$side-width: 568px;
+
+@mixin media-query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+body {
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  font-size: $base-font-size;
+  font-style: normal;
+  font-weight: $base-font-weight;
+  color: #555;
+  letter-spacing: 1px;
+  @include media-query($ipad-width) {
+    font-size: 14px;
+    line-height: 2;
+  }
+}
+
 img{
     width:100%;
 }

@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Auth::routes();
 
@@ -30,3 +28,5 @@ Route::group(['prefix' => 'admin','middleware' => 'auth' ], function() {
 });
 
 Route::get('/', 'TennisController@index');
+
+Route::get('events/event{event_id}', 'TennisController@show')->name("tennis.show");
