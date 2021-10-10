@@ -42,7 +42,7 @@
                         <!-- Left Side Of Navbar -->
                         <ul class="navbar-nav mr-auto">
                             <li class="mr-4"><a href="{{ url('admin/tennis/about') }}">サイトについて</a></li>
-                            <li><a href="{{ url('/check') }}">開催情報検索</li>
+                            <li><a href="{{ url('check') }}">開催情報検索</li>
                         </ul>
                         
                         <!-- Right Side Of Navbar -->
@@ -85,9 +85,19 @@
              </main>
              
              <footer class="bg-dark">
-                 <div class="container">
-                     <h2>footer</h2>
-                 </div>
+                     <nav class="navbar navbar-expand-md navbar-laravel">
+                         <div class="logo mr-4">
+                             <a href="{{ url('/') }}"><img src="{{ asset('img/logo.png') }}" /></a>
+                         </div>
+                         <ul class="navbar-nav mr-auto">
+                            <li class="mr-4"><a href="{{ url('admin/tennis/about') }}">サイトについて</a></li>
+                            <li><a href="{{ url('/check') }}">開催情報検索</li>
+                         </ul>
+                         <p class="navbar-nav ml-auto">
+                                <h3>メールアドレス　info@tennis.jp</h3>
+                                <h3>電話番号　090-0000-0000</h3>
+                     　　</p>
+                     </nav>
              </footer>
         </div>
     </body>

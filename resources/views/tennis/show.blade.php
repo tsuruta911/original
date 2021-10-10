@@ -3,10 +3,11 @@
 
 @section('content')
 <div class="container">
-    <h2>{{$event->eventname}}</h2>
-    <p>{{$event->content}}</p>
-    <p>場所：{{$event->place}}</p>
-    <p>開催時間：{{$event->time}}</p>
-    <p>料金：{{$event->money}}</p>
+    <p class="d-block border mr-4 text-center">イベント名:{{$event->eventname}}</h2>
+    <p class=mt-4>開催内容　{{$event->content}}</p>
+    <p class="border-top mt-3">場所：{{$event->place}}</p>
+    <p class="border-top mt-3">開催時間：{{$event->time}}</p>
+    <p class="border-top mt-3">料金：{{$event->money}}</p>
+    <p class="border-top mt-3">申し込み方法：弊社メールアドレスまたはお電話にてからお申し込みください。その際は氏名、年齢、所属、テニス歴、電話番号、メールアドレスをお願いします。</p>
 </div>
 @endsection

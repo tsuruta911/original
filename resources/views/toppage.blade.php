@@ -11,12 +11,12 @@
             <p>テニスしたい人同士をマッチングするサイト</p>
         </div>
         <div class="row text-white">
-            <p class="mr-4"><a class="d-block border rounded-pill p-4 bg-danger" href="{{ url('/admin/tennis') }}">エントリーする　＞</a></p>
-            <p class="mr-4"><a class="d-block border rounded-pill p-4 bg-info"href="{{ url('/admin/tennis/create') }}">テニスマッチングを主催する　＞</a></p>
+            <p class="mr-4 mt-3"><a class="d-block border rounded-pill p-4 bg-danger" href="{{ url('/admin/tennis') }}">エントリーする　＞</a></p>
+            <p class="mr-4 mt-3"><a class="d-block border rounded-pill p-4 bg-info"href="{{ url('/admin/tennis/create') }}">テニスマッチングを主催する　＞</a></p>
         </div>
         <div>
-            <p class="d-block text-center bg-white">Pickup matches</p>
-            <p class="text-white text-center lead">直近のテニスの開催情報</p>
+            <p class="d-block text-center bg-white py-2 mt-3">Pickup matches</p>
+            <p class="text-white text-center lead py-3 mt-5">直近のテニスの開催情報</p>
         </div>
     </div>
 </div>
@@ -27,8 +27,8 @@
         @foreach($posts as $event)
         <li>
             <a href="{{ route('tennis.show', ['event_id' => $event->id] ) }}">
-            <h3>{{ \Str::limit($event->eventname, 50) }}</h3>
-            <p>開催場所：{{ \Str::limit($event->place, 50) }}</p>
+            <h3 class="col-md-5 d-block border rounded-pill bg-dark">{{ \Str::limit($event->eventname, 50) }}</h3>
+            <p class="col-md-5 d-block border rounded-pill bg-dange">開催場所：{{ \Str::limit($event->place, 50) }}</p>
             </a>
         </li>
         @endforeach
