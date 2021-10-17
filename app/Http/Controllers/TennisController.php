@@ -20,5 +20,4 @@ class TennisController extends Controller
         $event = Event::find($id);
         return view('tennis/show',['event' => $event]);
     }
-    
 }
